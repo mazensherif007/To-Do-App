@@ -20,6 +20,8 @@
     <string name="light">Light</string>
     <string name="dark">Dark</string>
     <string name="english">English</string>
+    <string name="ok">ok</string>
+    <string name="todo">TODO</string>
 
     <string-array name="languages">
         <item>English</item>

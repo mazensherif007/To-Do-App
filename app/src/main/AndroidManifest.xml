@@ -10,25 +10,28 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
+        android:name=".App"
         android:theme="@style/Base.Theme.ToDo"
         tools:targetApi="31">
         <activity
-            android:name=".ui.taskDetails.TaskDetailsActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.home.HomeActivity"
             android:exported="false"
-            android:theme="@style/Base.Theme.ToDo" />
+            android:theme="@style/Base.Theme.ToDo" >
+        </activity>
         <activity
-            android:name=".ui.splash.SplashActivity"
-            android:exported="true"
-            android:theme="@style/Base.Theme.ToDo.splash">
+            android:name=".taskDetails.EditTaskActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.ToDo" >
+        </activity>
+        <activity
+            android:name=".ui.home.SplashScreen"
+            android:theme="@style/Base.Theme.ToDo"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+    </application>
 </manifest>

@@ -1,11 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="10dp"
-    tools:background="@color/lime">
+    tools:background="@color/lime"
+    >
+
+    <com.zerobranch.layout.SwipeLayout
+        android:id="@+id/swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:draggedItem="@id/drag_item"
+        app:leftItem="@id/left_view"
+        app:isFreeDragAfterOpen="true"
+        app:isTogether="true"
+        app:swipeDirection="right">
+
+        <ImageView
+            android:id="@+id/left_view"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@drawable/delete_reactangle"
+            android:gravity="center"
+            android:paddingEnd="24dp"
+            android:paddingStart="24dp"
+            android:src="@drawable/ic_delete"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/drag_item"
@@ -74,14 +97,16 @@
             <ImageButton
                 android:id="@+id/btn_task_isDone"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="34dp"
                 android:layout_margin="20dp"
                 android:background="@drawable/check_mark"
+                android:contentDescription="@string/todo"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
 
+    </androidx.cardview.widget.CardView>
+    </com.zerobranch.layout.SwipeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
